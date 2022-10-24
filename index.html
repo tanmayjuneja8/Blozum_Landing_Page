@@ -2,172 +2,218 @@
 <html lang="en">
 
   <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Doomout</title>
-    <meta name="title" content="Doomout">
-    <meta name="description" content="A minimal email client for inbox zero enthusiasts.">
+    <title>Blozum</title>
+    <meta name="title" content="Blozum">
+    <meta name="description" content=".">
     <meta name="keywords" content="tiny, mail, client, gmail, icloud, minimal, superhuman">
-    <meta name="author" content="@ijazulrehman">
+    <meta name="author" content="@tanmayjuneja8">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://doomout.com/">
-    <meta property="og:title" content="Doomout">
-    <meta property="og:description" content="A minimal email client for inbox zero enthusiasts.">
+    <!-- <meta property="og:url" content="https://doomout.com/"> -->
+    <meta property="og:title" content="TIS">
+    <meta property="og:description" content="Blozum is a personal finance app which helps you spend wisely.">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://doomout.com/">
-    <meta property="twitter:title" content="Doomout">
-    <meta property="twitter:description" content="A minimal email client for inbox zero enthusiasts.">
-    <link href="images/thumbnail.jpg" rel="apple-touch-icon">
+    <!-- <meta property="twitter:url" content="https://doomout.com/"> -->
+    <meta property="twitter:title" content="TIS">
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="twitter:description" content="Blozum is a personal finance app which helps you spend wisely.">
     <link href="images/favicon.ico" rel="shortcut icon">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
 <body>
+  <div class="modal1">
+    <button type="button" class="modal1-close modal-toggle1"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
+    <div class="modal1-dialog">
+      <div class="modal1-content">
+          <h3 class="modal1-title">Please join the waitlist to get your unique referral code.</h3>
+        <div class="modal1-body">
+          </div>
+        <button class="button" id="referral_button">Copy Referral Message</button>
+        <br><br><br>
+        <div class="share-btn-container">
+          <a href="#" id="fb" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a href="#" id="twitter" class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" id="linkedin" class="button"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="#" id="wa" class="button"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="modal">
   <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
   <div class="modal-content">
-    <div class="success">
-      <a href="index.html" class="logo"><img src="images/logo.svg" alt="logo"/></a>
-      <h2 class="modal-title first-name" id="title-name"></h2>
-      <p>You're on the list! We'll be in touch.</p>
-      <a href="index.html" class="button">Back home</a>
-    </div>
     <div class="form-content">
-      <a href="index.html" class="logo"><img src="images/logodo.svg" alt="logo"/></a>
-      <h2 class="modal-title">Join the Doomout Waitlist</h2>
+      <a href="index.html" class="logo"></a>
+      <h2 class="modal-title">Join the Waitlist</h2>
       <p class="modal-subtitle">We're still in early stages, and we'll let you know once we're ready for more beta testers.</p>
-      <form class='form' name='doomoutForm' method='POST'><input type='hidden' name='form-name' value='doomoutForm' />
+      <form class='form' id="referralForm" name='TISForm' method='POST'><input type='hidden' name='form-name' value='TISForm' />
         <div class="group">
-          <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
+          <input type="text" id="firstName" placeholder="&nbsp;" autocomplete="off" required>
           <label for="first-name">First name</label>
           <span class="border"></span>
         </div>
         <div class="group">
-          <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+          <input type="email" id="emailid" placeholder="&nbsp;" autocomplete="off" required>
           <label for="email">Email</label>
           <span class="border"></span>
         </div>
+        <div class="group">
+          <input type="text" id="number" placeholder="&nbsp;" autocomplete="off" required>
+          <label for="first-name">Phone Number</label>
+          <span class="border"></span>
+        </div>
+        <div class="group">
+          <input type="text" id="referral" placeholder="&nbsp;" autocomplete="off">
+          <label for="first-name">Referral Code (If Any)</label>
+          <span class="border"></span>
+        </div>
+        <div class="container d-flex justify-content-sm-end" title="Join" id="joinWaitlist">
         <button type="submit" class="button">Join the waitlist</button>
       </form>
     </div>
   </div>
+    </div>
+  </div>
 </div>
-  <div class="content">
-    <a href="index.html" class="logo"><img src="images/logodo.png" alt="logo"/></a>
+<div class="content">
     <div class="hero">
-      <h1 class="title">We explore and uncover</h1>
+      <h1 class="title">We help you</h1>
       <h1 class="title shift clip">
         <span class="word-shift">
-          <b class="is-visible">inbox zero enthusiasts&nbsp;</b>
-          <b>minimalists</b>
-          <b>indie hackers</b>
-          <b>mindful people</b>
-          <b>designers</b>
-          <b>side project junkies</b>
-          <b>people who want less</b>
+          <b class="is-visible">spend wisely&nbsp;</b>
+          <b>stay within your budget by alerting you before payments</b>
+          <b>earn cashbacks and enjoy Blozum rewards</b> 
+          <b>save and invest wisely</b>
+          <b>manage your budget efficiently</b>
+          <b>analyze all your expenditures</b>
         </span>
       </h1>
       <button class="button modal-toggle">Join the waitlist</button>
-      <p class="subtitle">Available soon for Mac <img src="images/logo-apple.svg" alt="apple"/></p>
-    </div>
-    <div class="screen-wrapper">
-      <img src="images/screen.png" class="screen" alt="screen"/>
-    </div>
+      <button class="button modal-toggle1" data-target="#myModal">Get My Referral Code</button>
+      <br>
+      <p class="subtitle"><b>Earn 1000 BLZ coins by joining the waitlist.</b></p>
+      </div>
     <section class="section section-features">
-      <h2 class="title">An intentionally dead simple email experience</h1>
+      <h2 class="title">Never run out of money in the middle of the month,</h2>
+      <h2 class="title">again!</h2>
       <div class="features">
         <img src="images/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay"/>
         <img src="images/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay"/>
         <img src="images/overlay-top.svg" class="overlay-top show-mobile" alt="overlay"/>
         <img src="images/overlay-bottom.svg" class="overlay-bottom show-mobile" alt="overlay"/>
-        <div class="row donts">
-          <div class="feature"><i class="icon" data-feather="x"></i> No integrations</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No templates</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No autoresponders</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No reminders</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No rules</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No filters</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No A.I.</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No snoozing</div>
-          <!-- Repeat-->
-          <div class="feature"><i class="icon" data-feather="x"></i> No integrations</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No templates</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No autoresponders</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No reminders</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No rules</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No filters</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No A.I.</div>
-          <div class="feature"><i class="icon" data-feather="x"></i> No snoozing</div>
-        </div>
         <div class="row dos">
-          <div class="feature"><i class="icon" data-feather="check"></i>Shortcuts</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Unified inbox</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Dark mode</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Lightning fast</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Beautiful imagery</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Simple UI</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Interactive</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Themes</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Reminders</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Best Offers</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Interactive</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Budget Management</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Secure Wallet</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Exciting Rewards</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Expenditure analysis</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Huge Cashbacks</div>
           <!-- Repeat-->
-          <div class="feature"><i class="icon" data-feather="check"></i>Shortcuts</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Unified inbox</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Dark mode</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Lightning fast</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Beautiful imagery</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Simple UI</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Interactive</div>
-          <div class="feature"><i class="icon" data-feather="check"></i>Themes</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Reminders</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Best Offers</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Interactive</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Budget Management</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Secure Wallet</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Exciting Rewards</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Expenditure analysis</div>
+          <div class="feature"><i class="icon" data-feather="check"></i> Huge Cashbacks</div>
+        </div>
+        <div class="row donts">
+          <div class="feature"><i class="icon" data-feather="x"></i> Over-expenditures</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Money squandering</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Reckless Purchases</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> 'Credit Card' Dependency</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Late Payments</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Overshooting budgets</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Need to borrow</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Extravagant bill payments</div>
+          <!-- Repeat-->
+          <div class="feature"><i class="icon" data-feather="x"></i> Over-expenditures</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Money squandering</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Reckless Purchases</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> 'Credit Card' Dependency</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Late Payments</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Overshooting budgets</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Need to borrow</div>
+          <div class="feature"><i class="icon" data-feather="x"></i> Extravagant bill payments</div>
         </div>
       </div>
+      
+    <br><br><br><br><br>
       <!-- <p>If you’re looking for an email client with more features, try <a href="">these</a>.</p> -->
-    </section>
-    <section class="section section-providers">
-      <h2 class="title">Use with any and all of your email providers</h2>
+      <h1 class="title">Made by 'experienced' spendthrifts to help you budget efficiently.</h1>
+      <br><br>
       <div class="cards">
         <img src="images/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay"/>
         <img src="images/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay"/>
+        <div style="background-image:url('././images/iphone.png');width:370px;height:760px;margin:0 auto;">
+        <br><br><br><br><br><br>
         <div class="slider">
-          <div class="slide"><img src="images/card-icloud.svg" alt="icloud"/></div>
-          <div class="slide"><img src="images/card-gmail.svg" alt="gmail"/></div>
-          <div class="slide"><img src="images/card-outlook.svg" alt="outlook"/></div>
-          <div class="slide"><img src="images/card-yahoo.svg" alt="yahooe"/></div>
-          <div class="slide"><img src="images/card-pop3.svg" alt="pop3"/></div>
-          <div class="slide"><img src="images/card-imap.svg" alt="imap"/></div>
+          <div class="slide"><img src="images/card-5.png" /></div>
+          <div class="slide"><img src="images/card-outlook.png" /></div>
+          <div class="slide"><img src="images/card-3.png" /></div>
+          <div class="slide"><img src="images/card-2.png" /></div>
         </div>
       </div>
-    </section>
-    <section class="section imagery">
-      <h2 class="title">Celebrate Inbox Zero with beautiful imagery</h2>
-      <img src="images/overlay-bottom.svg" class="overlay-bottom hide-mobile" alt="overlay"/>
-      <div class="zero-slider">
-        <div class="slide"><img src="images/screen-illo-1.png" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-illo-2.png" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-illo-3.png" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-illo-4.png" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-illo-5.png" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-illo-6.png" alt="inboxzero"/></div>
       </div>
+    </div>
+    <br><br><br><br><br>
+    <h2 class="title" style="font-size: 27px;">Play the game to win up to <b>INR 100</b>, guaranteed redeemable <b>BLZ coins</b>,
+        exciting Blozum vouchers, and <b>much more! 💫</b></h2>
+    <br><br>
+    <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="1100"
+    height="700"
+    src="https://slotgame.vercel.app/">
+</iframe>
     </section>
     <section class="section cta">
       <div class="cta-content">
-        <h1 class="title">Join the beta, and start loving email again.</h1>
+        <h2 class="title">Join the waitlist, and start loving payments again.</h2>
         <button class="button white modal-toggle">Join the waitlist</button>
-        <p class="subtitle">Available soon for Mac <img src="images/logo-apple.svg" alt="apple"/></p>
       </div>
       <div class="zero-slider">
-        <div class="slide"><img src="images/screen-cta-1.jpg" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-cta-2.jpg" alt="inboxzero"/></div>
-        <div class="slide"><img src="images/screen-cta-3.jpg" alt="inboxzero"/></div>
+        <div class="slide"><img src="images/screen-cta-1.png" alt="inboxzero"/></div>
+        <div class="slide"><img src="images/screen-cta-2.png" alt="inboxzero"/></div>
+        <div class="slide"><img src="images/screen-cta-31.png" alt="inboxzero"/></div>
       </div>
     </section>
     <footer class="footer">
-      <p>&copy; Doomout</p>
+          <h3>Spread the word:</h3>
+          <a href="#" id="fb1" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a href="#" id="twitter1" class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" id="linkedin1" class="button"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="#" id="wa1" class="button"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+          <h3 align="left">Contact us - support@blozum.com</h3>
     </footer>
     </div>
   </div>
   <script src="./js/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+<script type="module">
+    // Close modal1 on escape key
+  $(document).keyup(function(e) {
+    if (e.key === "Escape") {
+      $('.modal1').removeClass('modal1-show');
+      $('.content').removeClass('content-blurred');
+      $('body').removeClass('no-scroll');
+    }
+  });
 
   // Close modal on escape key
   $(document).keyup(function(e) {
@@ -212,21 +258,10 @@
       $('body').toggleClass('no-scroll');
     });
 
-    // Reserve username form
-    $(".form").submit(function(e) {
-      e.preventDefault();
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function() {
-        $('.form-content').addClass('form-content-hide');
-        $('.success').addClass('success-show');
-      });
-    });
-
-    // Save user's first name
-    $(".form").submit(function(e) {
-      e.preventDefault();
-      var value = $("#firstName").val();
-      $('.first-name').text("Thank you," + " " + value + "!");
+    $('.modal-toggle1').click(function(){
+      $('.modal1').toggleClass('modal1-show');
+      $('.content').toggleClass('content-blurred');
+      $('body').toggleClass('no-scroll');
     });
 
     // Feather icons
@@ -242,6 +277,228 @@
     });
 
   });
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js'
+    import { getFirestore, getDocs, collection, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js'
+    import { getDatabase, ref, set, runTransaction } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+    import {USERNAME, PWD} from "./config.js"
+
+      const firebaseConfig = {
+  apiKey: "AIzaSyDfeNYGpnsrDHyAks9q-72HRY5OXP8tQPg",
+  authDomain: "game-referral.firebaseapp.com",
+  databaseURL: "https://game-referral-default-rtdb.firebaseio.com",
+  projectId: "game-referral",
+  storageBucket: "game-referral.appspot.com",
+  messagingSenderId: "1017038419798",
+  appId: "1:1017038419798:web:f95c03206b0b620fe9c8f7",
+  measurementId: "G-JWD97LTK5T"
+};
+firebase.initializeApp(firebaseConfig);
+
+
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+const facebookBtn = document.getElementById("fb");
+    const twitterBtn = document.getElementById("twitter");
+    const linkedinBtn = document.getElementById("linkedin");
+    const whatsappBtn = document.getElementById("wa");
+
+    const facebookBtn1 = document.getElementById("fb1");
+    const twitterBtn1 = document.getElementById("twitter1");
+    const linkedinBtn1 = document.getElementById("linkedin1");
+    const whatsappBtn1 = document.getElementById("wa1");
+
+    let postUrl = "https://slotgame.vercel.app/";
+  let postTitle = encodeURI("Play this game to win cash and exciting prizes like I did on the Blozum website. Blozom Website:");
+
+  facebookBtn.setAttribute(
+    "href",
+    `https://www.facebook.com/sharer.php?u=${postUrl}`
+  );
+
+  twitterBtn.setAttribute(
+    "href",
+    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  );
+
+  linkedinBtn.setAttribute(
+    "href",
+    `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+  );
+
+  whatsappBtn.setAttribute(
+    "href",
+    `https://wa.me/?text=${postTitle} ${postUrl}`
+  );
+
+  facebookBtn1.setAttribute(
+    "href",
+    `https://www.facebook.com/sharer.php?u=${postUrl}`
+  );
+
+  twitterBtn1.setAttribute(
+    "href",
+    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  );
+
+  linkedinBtn1.setAttribute(
+    "href",
+    `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+  );
+
+  whatsappBtn1.setAttribute(
+    "href",
+    `https://wa.me/?text=${postTitle} ${postUrl}`
+  );
+
+
+// reference your database
+  const app = initializeApp(firebaseConfig);
+  const db = firebase.database();
+var contactFormDB = firebase.database().ref("Game-Referral");
+document.getElementById("referralForm").addEventListener("submit", submitForm);
+function removeCommas(word){
+		return word.replace(/,/g, '');
+	}
+// option to insert referral code -> generate unique referral code -> show referral code after login -> copy referral code -> 
+let alphaNumeric = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '1','2','3','4','5','6','7','8','9'];
+function refCodeGen(){
+let picks = [];
+
+								// loop through alphabets array and pick an alphabet with the generated index
+								for (let i = 0; i < 6; i++) {
+									let key = Math.floor(Math.random()*alphaNumeric.length);
+									picks.push(alphaNumeric[key]);
+								}								
+
+								// convert selected alphabets array to string and remove seperating commas
+								let letters1 = picks.toString();
+                                letters1 = removeCommas(letters1);
+                                return letters1;
+}
+const CopyToClipboard = (id) => {
+    navigator.clipboard.writeText
+                (id);
+}
+async function submitForm(e) {
+  e.preventDefault();
+
+  var firstName = getElementVal("firstName");
+  var emailid = getElementVal("emailid");
+  var number = getElementVal("number");
+var referral = getElementVal("referral");
+
+// check the user name with the referral code - "referral".
+var username = USERNAME;
+var pwd = PWD;
+firebase.auth().signInWithEmailAndPassword(username, pwd);
+
+var uniqueCode = firstName.substring(0, 3).toUpperCase() + refCodeGen();
+  var query = firebase.database().ref("Game-Referral");
+query.once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var key = childSnapshot.key;
+      var childData = childSnapshot.val();
+      if (referral === childData.referral) {
+              const db = getDatabase();
+              const updates = {};
+              updates[`Game-Referral/${key}/count`] = firebase.database.ServerValue.increment(1);
+              updates[`Game-Referral/${key}/firstName`] = childData.firstName;
+              query.update(updates);
+            }
+  });
+});
+
+  saveMessages(firstName, emailid, number, uniqueCode);
+  let postUrl = "https://slotgame.vercel.app/";
+  let postTitle = encodeURI("Play this game and use my Blozum referral code to win cash and exciting prizes like I did on the Blozum website. Referral Code: "+uniqueCode+" Blozom Website:");
+
+  facebookBtn.setAttribute(
+    "href",
+    `https://www.facebook.com/sharer.php?u=${postUrl}`
+  );
+
+  twitterBtn.setAttribute(
+    "href",
+    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  );
+
+  linkedinBtn.setAttribute(
+    "href",
+    `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+  );
+
+  whatsappBtn.setAttribute(
+    "href",
+    `https://wa.me/?text=${postTitle} ${postUrl}`
+  );
+
+  facebookBtn1.setAttribute(
+    "href",
+    `https://www.facebook.com/sharer.php?u=${postUrl}`
+  );
+
+  twitterBtn1.setAttribute(
+    "href",
+    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  );
+
+  linkedinBtn1.setAttribute(
+    "href",
+    `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+  );
+
+  whatsappBtn1.setAttribute(
+    "href",
+    `https://wa.me/?text=${postTitle} ${postUrl}`
+  );
+
+  // reset the form
+  document.getElementById("referralForm").reset();
+  document.getElementsByClassName("modal1-title")[0].innerHTML = "Your Unique Referral Code: " + uniqueCode;
+  //  copy referral code message
+    var text = "Play this game and use my Blozum referral code to win cash and exciting prizes like I did on the Blozum website. Referral Code: "+uniqueCode+" Blozom Website: "+"<link>";
+    // document.getElementsByClassName("modal1-body")[0].innerHTML = "<p>Play this game and use my Blozum referral code to win cash and exciting prizes like I did on the Blozum website.<br><br> Referral Code: "+uniqueCode+"<br> Blozum Website: "+"<link></p>";
+    const btn = document.getElementById("referral_button");
+    btn.onclick = CopyToClipboard(text);
+    setTimeout(function () {
+        document.getElementsByClassName("modal-close modal-toggle")[0].click();
+        document.getElementsByClassName("modal1-close modal-toggle1")[0].click();
+        }, 500);
+    /*const btn2 = document.getElementById("take_me_back");
+    btn2.onclick = function() {document.getElementsByClassName('modal1-close modal-toggle1')[0].click();}*/
+  
+}
+
+
+
+const saveMessages = (firstName, emailid, number, referral) => {
+  var newContactForm = contactFormDB.push();
+
+  newContactForm.set({
+    firstName: firstName,
+    emailid: emailid,
+    number: number,
+    referral : referral,
+    count : 0
+  });
+};
+
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
+};
 </script>
 
 </body>

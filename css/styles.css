@@ -295,6 +295,19 @@ a,
 .logo,
 .features .row,
 .modal,
+.modal1,
+.modal .modal-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
 .modal .modal-content {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -331,6 +344,14 @@ form .group label {
 .center-x,
 .logo,
 .modal .modal-close span {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%
+}
+
+.modal1 .modal1-close span {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -497,6 +518,105 @@ a,
     display: flex
 }
 
+
+.center {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%
+}
+
+.center-y,
+.shift.clip .word-shift:after,
+.overlay-left,
+.overlay-right,
+form .group label {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%
+}
+
+.center-x,
+.logo,
+.modal1 .modal1-close span {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%
+}
+
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 0
+}
+
+input:hover,
+input:active,
+input:focus {
+    outline: none
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 40px #fff inset !important;
+    -webkit-text-fill-color: #222 !important
+}
+
+::-webkit-input-placeholder {
+    color: #222
+}
+
+:-ms-input-placeholder {
+    color: #222
+}
+
+::-moz-placeholder {
+    color: #222
+}
+
+:-moz-placeholder {
+    color: #222
+}
+
+.show-mobile {
+    display: none
+}
+
+@media (max-width: 900px) {
+    .hide-mobile {
+        display: none !important
+    }
+
+    .show-mobile {
+        display: block !important
+    }
+}
+
+.flex-center,
+.hero,
+.logo,
+.features .row,
+.modal1,
+.modal1 .modal1-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
 .center {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -577,6 +697,7 @@ input:-webkit-autofill {
         display: block !important
     }
 }
+
 
 h1,
 .h1,
@@ -868,9 +989,16 @@ button {
     width: 400px
 }
 
+.title1 {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    width: 500px
+}
+
 .subtitle {
     margin: 16px 0 0 -4px;
-    font-size: 12px
+    font-size: 17px
 }
 
 .subtitle img {
@@ -882,6 +1010,10 @@ button {
 }
 
 .title.wide {
+    width: 600px
+}
+
+.title1.wide {
     width: 600px
 }
 
@@ -1030,7 +1162,7 @@ button {
         max-width: none;
         width: 600px
     }
-
+    
     .section {
         padding: 80px 0
     }
@@ -1052,6 +1184,10 @@ button {
     }
 
     .section.cta .title {
+        margin-top: 60px
+    }
+
+    .section.cta .title1 {
         margin-top: 60px
     }
 
@@ -1099,21 +1235,21 @@ button {
 }
 
 .features .donts .icon {
-    color: #B2B2B2
+    color: #FF0000;
 }
 
 .features .dos .icon {
-    color: #000000;
+    color: #00FF00;
 }
 
 .features .donts {
-    -webkit-animation: scrollLeft 80s linear infinite;
-    animation: scrollLeft 80s linear infinite
+    -webkit-animation: scrollLeft 30s linear infinite;
+    animation: scrollLeft 30s linear infinite
 }
 
 .features .dos {
-    -webkit-animation: scrollRight 80s linear infinite;
-    animation: scrollRight 80s linear infinite
+    -webkit-animation: scrollRight 30s linear infinite;
+    animation: scrollRight 30s linear infinite
 }
 
 .features .overlay-bottom {
@@ -1284,7 +1420,15 @@ button {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     max-width: none;
-    opacity: 0.4
+    opacity: 0.5;
+}
+
+.background {
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px); 
+	-o-filter: blur(3px); 
+	-ms-filter: blur(3px); 
+	filter: blur(3px); 
 }
 
 .slider .slide.is-selected img {
@@ -1403,6 +1547,109 @@ button {
     transform: translateY(0)
 }
 
+.modal1 {
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: 8
+}
+
+.modal1 .modal1-close {
+    position: absolute;
+    background: none;
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    right: 0;
+    top: 0
+}
+
+.modal1 .modal1-close span {
+    font-family: "colfax-light", sans-serif;
+    pointer-events: none;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 8px;
+    bottom: 14px
+}
+
+.modal1 .modal1-close:hover .icon {
+    -webkit-transform: rotate(90deg) scale(1);
+    -ms-transform: rotate(90deg) scale(1);
+    transform: rotate(90deg) scale(1)
+}
+
+.modal1 .modal1-close:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9)
+}
+
+.modal1 .modal1-close:hover span {
+    opacity: 0;
+    bottom: 0
+}
+
+.modal1 .modal1-close .icon {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    height: 36px;
+    width: 36px
+}
+
+.modal1 .modal1-content {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: scroll;
+    padding: 60px 0;
+    max-width: 90%
+}
+
+.modal1 .modal1-content .modal1-title {
+    letter-spacing: -2.5px;
+    margin: 40px auto 4px;
+    font-size: 40px
+}
+
+.modal1 .modal1-content .modal1-subtitle {
+    width: 340px;
+    margin: 0 auto;
+
+}
+
+.modal1 .modal1-content .button {
+    margin-top: 20px
+}
+
+.modal1-show {
+    pointer-events: all;
+    opacity: 1
+}
+
+.modal1-show .modal1-content {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
 form {
     margin: 50px auto 0;
     width: 300px
@@ -1509,7 +1756,7 @@ form .button {
 }
 
 .footer {
-    /* -webkit-box-shadow: 0 0 200px rgba(34, 34, 34, 0.4);
+    /*-webkit-box-shadow: 0 0 200px rgba(34, 34, 34, 0.4);
     box-shadow: 0 0 200px rgba(34, 34, 34, 0.4);
     background: #fff;
     position: relative;
@@ -1517,15 +1764,15 @@ form .button {
     padding: 60px 0;
     z-index: 2; */
 
-    line-height: 1.33341;
+    line-height: 1.444;
     font-weight: 400;
     letter-spacing: -.01em;
     background-color: #f2f2f2;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    padding: 40px 0;
-    /* padding-bottom: 5px; */
+    padding: 25px 0;
+    padding-bottom: 5px; 
 }
 
 .footer p {
@@ -1544,6 +1791,20 @@ form .button {
     }
 
     .modal .modal-content .modal-title {
+        letter-spacing: -1px;
+        font-size: 26px
+    }
+
+    .modal1 .modal1-close {
+        height: 80px;
+        width: 80px
+    }
+
+    .modal1 .modal1-content {
+        padding: 40px 0
+    }
+
+    .modal1 .modal1-content .modal1-title {
         letter-spacing: -1px;
         font-size: 26px
     }
