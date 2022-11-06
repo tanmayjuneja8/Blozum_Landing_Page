@@ -221,7 +221,14 @@ js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+import mixpanel from 'mixpanel-browser';
+// or with require() syntax:
+// const mixpanel = require('mixpanel-browser');
 
+// Enabling the debug mode flag is useful during implementation,
+// but it's recommended you remove it for production
+mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54', {debug: true}); 
+mixpanel.track('Sign up');
     const facebookBtn1 = document.getElementById("fb1");
     const twitterBtn1 = document.getElementById("twitter1");
     const linkedinBtn1 = document.getElementById("linkedin1");
