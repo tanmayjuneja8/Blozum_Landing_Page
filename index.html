@@ -17,9 +17,8 @@
 
     // Enabling the debug mode flag is useful during implementation,
     // but it's recommended you remove it for production
-    mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54');
-    mixpanel.track('New Users');
-    console.log("New Users");
+    mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54', {debug: true, dnt_off: true});
+    mixpanel.track('mixpanel');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -215,13 +214,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   });
 
-// or with require() syntax:
-// const mixpanel = require('mixpanel-browser');
+    mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54', {debug: true, dnt_off: true});
+    mixpanel.track('mixpanel');
 
-// Enabling the debug mode flag is useful during implementation,
-// but it's recommended you remove it for production
-mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54'); 
-mixpanel.track('New Users');
+    import Analytics from 'analytics'
+    import googleAnalytics from '@analytics/google-analytics'
+
+    const analytics = Analytics({
+      app: 'Blozum',
+      plugins: [
+        googleAnalytics({
+          measurementIds: ['UA-248604801-1']
+        })
+      ]
+    })
+
+    /* Track a page view */
+    analytics.page()
+
     const facebookBtn1 = document.getElementById("fb1");
     const twitterBtn1 = document.getElementById("twitter1");
     const linkedinBtn1 = document.getElementById("linkedin1");
