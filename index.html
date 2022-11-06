@@ -141,10 +141,10 @@
     </section>
     <footer class="footer">
           <h3>Spread the word:</h3>
-          <a href="#" id="fb1" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-          <a href="#" id="twitter1" class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#" id="linkedin1" class="button"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a href="#" id="wa1" class="button"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" id="fb1" class="button" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a href="#" id="twitter1" class="button" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" id="linkedin1" class="button" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="#" id="wa1" class="button" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp" aria-hidden="true" ></i></a>
         </div>
           <h3 align="left">Contact us - blozum.pay@gmail.com</h3>
     </footer>
@@ -152,9 +152,6 @@
   </div>
   <script src="./js/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
 <script type="module">
 
@@ -221,7 +218,7 @@ fjs.parentNode.insertBefore(js, fjs);
     const linkedinBtn1 = document.getElementById("linkedin1");
     const whatsappBtn1 = document.getElementById("wa1");
 
-    let postUrl = "https://slotgame.vercel.app/";
+    let postUrl = "https://blozum.com/";
   let postTitle = encodeURI("Play this game to win cash and exciting prizes like I did on the Blozum website. Blozom Website:");
 
   facebookBtn1.setAttribute(
@@ -231,7 +228,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
   twitterBtn1.setAttribute(
     "href",
-    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+    `https://twitter.com/intent/tweet?hashtags=blozum&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&related=tanmay_juneja8&text=Play%20this%20game%20to%20win%20cash%20and%20exciting%20prizes%20like%20I%20did%20on%20the%20Blozum%20website.%20&url=https%3A%2F%2Fblozum.com%2F&via=BlozumPay`
   );
 
   linkedinBtn1.setAttribute(
