@@ -17,7 +17,8 @@
 
     // Enabling the debug mode flag is useful during implementation,
     // but it's recommended you remove it for production
-    mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54'); 
+    mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54', {debug:true, ignore_dnt: true});
+    mixpanel.track('New Users'); 
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -213,14 +214,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   });
 
-import mixpanel from 'mixpanel-browser';
 // or with require() syntax:
 // const mixpanel = require('mixpanel-browser');
 
 // Enabling the debug mode flag is useful during implementation,
 // but it's recommended you remove it for production
-mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54'); 
-mixpanel.track('mixpanel');
+mixpanel.init('f60649dd99b71c35b9bf1fe04b557e54', {debug:true, ignore_dnt: true}); 
+mixpanel.track('New Users');
     const facebookBtn1 = document.getElementById("fb1");
     const twitterBtn1 = document.getElementById("twitter1");
     const linkedinBtn1 = document.getElementById("linkedin1");
