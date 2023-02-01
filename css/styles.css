@@ -984,9 +984,44 @@ button {
 
 .title {
     position: relative;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    width: 400px
+    width: 1000px
+}
+.rainbow-text {
+    display: inline;
+    animation: rainbow 7s ease-in-out infinite;
+    background-clip: text;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #ee0a67, #e56ab3,#ef87be );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 1000px
+}
+.rainbow-text1 {
+    display: inline;
+    animation: rainbow 7s ease-in-out infinite;
+    background-clip: text;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left,#00264d, #02386e,#00498b, #0052a2 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 1000px
+}
+  
+@keyframes rainbow {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
 }
 
 .title1 {
@@ -1010,7 +1045,7 @@ button {
 }
 
 .title.wide {
-    width: 600px
+    width: 800px
 }
 
 .title1.wide {
