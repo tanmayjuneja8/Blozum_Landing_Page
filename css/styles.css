@@ -1072,6 +1072,18 @@ button {
     margin: 0 auto -140px;
     width: 1400px
 }
+.scroll-effect {
+  height: 100vh;
+  overflow: hidden;
+}
+.secton {
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.secton.active {
+  opacity: 1;
+}
 
 .title {
     position: relative;
@@ -1675,110 +1687,6 @@ button {
     -ms-transform: translateY(0);
     transform: translateY(0)
 }
-
-.modal1 {
-    background: rgba(255, 255, 255, 0.8);
-    pointer-events: none;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    text-align: center;
-    overflow: hidden;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    opacity: 0;
-    z-index: 8
-}
-
-.modal1 .modal1-close {
-    position: absolute;
-    background: none;
-    height: 100px;
-    width: 100px;
-    z-index: 2;
-    right: 0;
-    top: 0
-}
-
-.modal1 .modal1-close span {
-    font-family: "colfax-light", sans-serif;
-    pointer-events: none;
-    letter-spacing: 1px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    font-size: 8px;
-    bottom: 14px
-}
-
-.modal1 .modal1-close:hover .icon {
-    -webkit-transform: rotate(90deg) scale(1);
-    -ms-transform: rotate(90deg) scale(1);
-    transform: rotate(90deg) scale(1)
-}
-
-.modal1 .modal1-close:active {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9)
-}
-
-.modal1 .modal1-close:hover span {
-    opacity: 0;
-    bottom: 0
-}
-
-.modal1 .modal1-close .icon {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-    height: 36px;
-    width: 36px
-}
-
-.modal1 .modal1-content {
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translateY(40px);
-    -ms-transform: translateY(40px);
-    transform: translateY(40px);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: scroll;
-    padding: 60px 0;
-    max-width: 90%
-}
-
-.modal1 .modal1-content .modal1-title {
-    letter-spacing: -2.5px;
-    margin: 40px auto 4px;
-    font-size: 40px
-}
-
-.modal1 .modal1-content .modal1-subtitle {
-    width: 340px;
-    margin: 0 auto;
-
-}
-
-.modal1 .modal1-content .button {
-    margin-top: 20px
-}
-
-.modal1-show {
-    pointer-events: all;
-    opacity: 1
-}
-
-.modal1-show .modal1-content {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0)
-}
-
 form {
     margin: 50px auto 0;
     width: 300px

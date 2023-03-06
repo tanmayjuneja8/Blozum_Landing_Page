@@ -56,7 +56,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ56BQX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="content" style="background-color: black;">   
+
+<style>
+  @media only screen and (max-width: 600px) {
+    .title {
+      font-size: 30px;
+    }
+  }
+</style>
+<div class="content" style="background-color: black;    overflow-x: hidden;">   
 <div class="hero">
 <h1 class="title" style="font-size: 100px; color: white "><span class="" id="rain1" style="font-size: 100px;">Hire.</span><span class="" id="rain2" style="font-size: 110px;">10x.</span><span class="" id="rain3" style="font-size: 100px;">Better.</span>
 </h1>
@@ -80,6 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     font-size: 24px;
     line-height: 1.5;
   }
+
   .animation {
     position: fixed;
     width: 50%;
@@ -116,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="hero1">
 		<div class="text">
 			<p id = "text1" class="hidden"><span class="rainbow" style="font-size: 24px;">Blozum's AI models are trained on huge corpus of companies and college names to sort and hire candidates based on the organisation's needs.</span></p>
-			</div>
+    </div>
       <div class = "text">
         <p id = "text2" class="hidden"><span class="rainbow12" style="font-size: 24px;">Our AI model extracts skills and competencies from the resume to help organisations make better hiring decisions.</span></p>
       </div>
@@ -133,9 +142,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img src="images/card-5.png"/>
     </div>
 		</div>
-    </div>
-    <div class="hero">
-      <!-- <h1 class="rainbow-text">Rainbow Text</h1> -->
+
+      
       <h1 class="title">We help you</h1>
       <h1 class="title shift clip">
         <span class="word-shift">
@@ -150,9 +158,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="button modal-toggle">Schedule a quick demo!</button>
       <br>
       <p class="subtitle"><b>Sign up now to get a free trail account for 29 days!</b></p>
-    <section class="section section-features">
-    </div>
-    <div class="hero">
+      <br><br><br><br><br><br><br><br>
+    <section class="section section-features" style="background-color:white;">
       <h2 class="title">Never run out of your Recruitment budgets,</h2>
       <h2 class="title">again!</h2>
       <div class="features">
@@ -235,22 +242,28 @@ const intervalId = setInterval(() => {
 const scrollHeight1 = document.documentElement.scrollHeight;
   const windowHeight = window.innerHeight;
 const hero1 = document.querySelector('.hero');
-hero1.style.height = `${windowHeight * 3.5}px`;
+hero1.style.height = `${windowHeight * 1.80}px`;
 const upperDiv = document.querySelector('.content');
 
 const combinations = [  document.getElementById('text1'),  document.getElementById('text2'), document.getElementById('text3'),document.getElementById('animation1'), document.getElementById('animation2'), document.getElementById('animation3')];
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
-  console.log(scrollTop);
-  console.log(windowHeight);
   if (scrollTop < 130){
     combinations[0].classList.remove('visible');
     combinations[0].classList.add('hidden');
     combinations[3].classList.remove('visible');
     combinations[3].classList.add('hidden');
+    combinations[1].classList.remove('visible');
+    combinations[1].classList.add('hidden');
+    combinations[4].classList.remove('visible');
+    combinations[4].classList.add('hidden');
+    combinations[2].classList.remove('visible');
+    combinations[2].classList.add('hidden');
+    combinations[5].classList.remove('visible');
+    combinations[5].classList.add('hidden');
   }
-  if (scrollTop >= 120 && scrollTop < windowHeight) {
+  if (scrollTop >= 120 && scrollTop < 1/2 * windowHeight) {
     // show the first combination
     combinations[0].classList.remove('hidden');
     combinations[0].classList.add('visible');
@@ -260,7 +273,7 @@ window.addEventListener('scroll', () => {
     combinations[1].classList.add('hidden');
     combinations[4].classList.remove('visible');
     combinations[4].classList.add('hidden');
-  } else if (scrollTop >= windowHeight && scrollTop < windowHeight * 2) {
+  } else if (scrollTop >= 1/2 * windowHeight && scrollTop < 7/8*windowHeight) {
     // show the second combination
     combinations[1].classList.remove('hidden');
     combinations[1].classList.add('visible');
@@ -276,7 +289,7 @@ window.addEventListener('scroll', () => {
     combinations[2].classList.add('hidden');
     combinations[5].classList.remove('visible');
     combinations[5].classList.add('hidden');
-  } else if (scrollTop >= windowHeight * 2 && scrollTop <= 3*windowHeight) {
+  } else if (scrollTop >= 7/8*windowHeight && scrollTop <= 5/4*windowHeight) {
     // show the third combination
     combinations[2].classList.remove('hidden');
     combinations[2].classList.add('visible');
@@ -289,7 +302,7 @@ window.addEventListener('scroll', () => {
     combinations[4].classList.remove('visible');
     combinations[4].classList.add('hidden');
   }
-  else if (scrollTop > 3 * windowHeight) {
+  else if (scrollTop > 5/4*windowHeight) {
     combinations[2].classList.remove('visible');
     combinations[2].classList.add('hidden');
     combinations[5].classList.remove('visible');
