@@ -62,7 +62,7 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body {
@@ -241,7 +241,8 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
+
 }
 
 body {
@@ -452,7 +453,7 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body {
@@ -761,7 +762,7 @@ a:hover {
 }
 
 body {
-    background: #f2f3f5;
+    background: #f2f3f5;;
     font-family: "colfax-medium", sans-serif;
     text-align: center;
     color: #222
@@ -937,13 +938,103 @@ button {
 }
 
 .hero {
-    padding: 240px 0 140px;
+    padding: 30vh 0 200px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    height: 100vh;
+    display: flex; /* use flexbox to center the text */
+    justify-content: space-between;
+    align-items: center; 
     flex-direction: column;
     width: 100%
 }
+.hero1 {
+    padding: 0px 0 0px;
+    position: fixed;
+    top:0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    height: 100%;
+    display: flex; /* use flexbox to center the text */
+    justify-content: center; /* horizontally center the text */
+    align-items: center; 
+    flex-direction: column;
+    width: 100%
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.animation {
+  width: 40%;
+  /* Adjust the width to fit your animation */
+}
+
+.scrolling-text {
+  width: 60%;
+  /* Adjust the width to fit your text */
+  overflow-y: scroll; /* Add this property to make the text scrollable */
+}
+
+/* Position the container div on the page */
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* Fix the animation on the right side of the screen */
+.animation {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* Style the scrolling text */
+/* .scrolling-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+} */
+
+.hidden {
+    opacity:0;
+    filter:blur(5px);
+    transition: opacity 0.5s ease-in-out;
+    transition: all 1s;
+    overflow-y: scroll;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.show {
+    opacity:1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
+/* Add some padding to the container div to create some space */
+.container {
+  padding: 20px;
+}
+
+
 
 .hero .button {
     margin-top: 30px
@@ -988,42 +1079,45 @@ button {
     margin: 0 auto;
     width: 1000px
 }
-.rainbow-text {
+.rainbow {
     display: inline;
-    animation: rainbow 7s ease-in-out infinite;
+    animation: rainbow 0.5s ease-in-out infinite;
     background-clip: text;
+    padding:0.05em;
     font-weight: bold;
-    background: -webkit-linear-gradient(left, #ee0a67, #e56ab3,#ef87be );
+    background: -webkit-linear-gradient(left,#007cf0, #00dfd8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    width: 1000px
 }
-.rainbow-text1 {
+.rainbow12 {
     display: inline;
-    animation: rainbow 7s ease-in-out infinite;
+    animation: rainbow 0.5s ease-in-out infinite;
     background-clip: text;
     font-weight: bold;
-    background: -webkit-linear-gradient(left,#00264d, #02386e,#00498b, #0052a2 );
+    padding:0.05em;
+    background: -webkit-linear-gradient(left,#8138ca,#fcbcd7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    width: 1000px
 }
-  
-@keyframes rainbow {
-    0% {
-      background-position: 100% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+.rainbow2 {
+    display: inline;
+    animation: rainbow 0.5s ease-in-out infinite;
+    background-clip: text;
+    padding:0.05em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left,#FF4D4D, #F9CB28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
 }
-
 .title1 {
     position: relative;
     max-width: 90%;
@@ -1970,12 +2064,12 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon {
