@@ -1095,6 +1095,7 @@ button {
     display: inline;
     animation: rainbow 0.5s ease-in-out infinite;
     background-clip: text;
+    padding:0.05em;
     font-weight: bold;
     background: -webkit-linear-gradient(left,#007cf0, #00dfd8);
     -webkit-background-clip: text;
