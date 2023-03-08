@@ -61,15 +61,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0ornCC6KJOSsx12Kt1N6A3EhVWZSZIlFjj9FQvuBCrqNnnw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
 <style>
-  @media only screen and (max-width: 600px) {
+  .title {
+      font-size: 100px;
+    }
+  #rain1, #rain2, #rain3 {
+    display: inline-block;
+  }
+  
+  /* Media Query for screens with a maximum width of 768px (standard for mobile devices) */
+  @media screen and (max-width: 768px) {
     .title {
-      font-size: 30px;
+      font-size: 50px;
+    }
+    #rain1, #rain2, #rain3 {
+      display: block;
+      font-size: 70px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 </style>
 <div class="content" style="background-color: black;    overflow-x: hidden;">   
 <div class="hero">
-<h1 class="title" style="font-size: 100px; color: white "><span class="" id="rain1" style="font-size: 100px;">Hire.</span><span class="" id="rain2" style="font-size: 110px;">10x.</span><span class="" id="rain3" style="font-size: 100px;">Better.</span>
+<h1 class="title" style="color: white "><span class="" id="rain1" style="font-size: 100px;">Hire.</span><span class="" id="rain2" style="font-size: 110px;">10x.</span><span class="" id="rain3" style="font-size: 100px;">Better.</span>
 </h1>
 </div>
  <svg class="arrows">
@@ -104,12 +118,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     margin: 20px;
     top: 50%;
     left: 20px;
-    transform: translateY(-35%);
+    transform: translateY(-25%);
   }
-  @media screen and (max-width: 600px) {
+  /* For screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .text {
+    position: fixed;
+    right: 0;
+    bottom: 0; /* Set the text to the bottom half of the screen */
+    width: 100%; /* Set the width to full screen */
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
   .animation {
-    width: 100%;
-    height: auto;
+    position: fixed;
+    width: 100%; /* Set the width to full screen */
+    height: 50%; /* Set the height to top half of the screen */
+    top: 0; /* Set the animation to the top half of the screen */
+    left: 0;
+    margin: 0; /* Remove margin to avoid extra space */
+    transform: none; /* Remove the translateY transform */
   }
 }
 
@@ -130,15 +161,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 	</style>
 
-	<div class="hero1">
+	<div class="hero1" >
 		<div class="text">
-			<p id = "text1" class="hidden"><span class="rainbow" style="font-size: 24px;">Blozum's AI models are trained on huge corpus of companies and college names to sort and hire candidates based on the organisation's needs.</span></p>
+			<p id = "text1" class="hidden">
+        <span class="rainbow" style="font-size: 60px;">100% time saved,</span> </p>
+        <p id = "text2" class="hidden"><span class="rainbow" style="font-size: 60px;">0% manual work.</span></p>
+        <p id = "text3" class="subtitle hidden">Blozum's AI model ranks candidates based on chosen parameters across 1000s of CVs to <b>save</b> a large amount of <b>time and manual work</b>.</p>
     </div>
       <div class = "text">
-        <p id = "text2" class="hidden"><span class="rainbow12" style="font-size: 24px;">Our AI model extracts skills and competencies from the resume to help organisations make better hiring decisions.</span></p>
+        <p id = "text4" class="hidden">
+          <span class="rainbow12" style="font-size: 60px;">Better hires,</span></p>
+          <p id = "text5" class="hidden"><span class="rainbow12" style="font-size: 60px;">Lower attrition.</span></p>
+          <p id = "text6" class="subtitle hidden">Blozum's AI models are trained on a huge corpus of data to help sort and hire the most suitable candidates for you so <b>attrition is minimized</b>.</p>
       </div>
       <div class="text">
-        <p id = "text3" class="hidden"><span class="rainbow2" style="font-size: 24px;">Skillset Pool Management</span></p>
+        <p id = "text7" class="hidden">
+          <span class="rainbow2" style="font-size: 60px;">Future-proof</span></p>
+          <p id = "text8" class="hidden"><span class="rainbow2" style="font-size: 60px;">Your Workforce.</span></p>
+          <p id = "text9" class="subtitle hidden">Our AI model <b>maintains</b> your company's Talent pool (skills of all your employees) so that you know the exact skills/competencies required to <b>widen your Talent pool</b> with your next hires. </p>
       </div>
       		<div class="animation hidden" id="animation1">
       <img src="images/card-2.png"/>
@@ -152,8 +192,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 
       
-      <h1 class="title">We help you</h1>
-      <h1 class="title shift clip">
+      <h1 class="title1">We help you</h1>
+      <h1 class="title1 shift clip">
         <span class="word-shift">
           <b class="is-visible">save time in recruiting&nbsp;</b>
           <b>select perfect culture fits </b>
@@ -168,8 +208,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="subtitle"><b>Sign up now to get a free trail account for 29 days!</b></p>
       <br><br><br><br><br><br><br><br>
     <section class="section section-features" style="background-color:white;">
-      <h2 class="title">Never run out of your Recruitment budgets,</h2>
-      <h2 class="title">again!</h2>
+      <h2 class="title1">Never run out of your Recruitment budgets,</h2>
+      <h2 class="title1">again!</h2>
       <div class="features">
         <!-- <img src="images/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay"/> -->
         <!-- <img src="images/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay"/> -->
@@ -250,10 +290,10 @@ const intervalId = setInterval(() => {
 const scrollHeight1 = document.documentElement.scrollHeight;
   const windowHeight = window.innerHeight;
 const hero1 = document.querySelector('.hero');
-hero1.style.height = `${windowHeight * 1.80}px`;
+hero1.style.height = `${windowHeight * 2.00}px`;
 const upperDiv = document.querySelector('.content');
 
-const combinations = [  document.getElementById('text1'),  document.getElementById('text2'), document.getElementById('text3'),document.getElementById('animation1'), document.getElementById('animation2'), document.getElementById('animation3')];
+const combinations = [  document.getElementById('text1'),  document.getElementById('text2'), document.getElementById('text3'), document.getElementById('text4'), document.getElementById('text5'), document.getElementById('text6'),document.getElementById('text7'),document.getElementById('text8'),document.getElementById('text9'), document.getElementById('animation1'), document.getElementById('animation2'), document.getElementById('animation3')];
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
@@ -270,51 +310,97 @@ window.addEventListener('scroll', () => {
     combinations[2].classList.add('hidden');
     combinations[5].classList.remove('visible');
     combinations[5].classList.add('hidden');
+    combinations[6].classList.remove('visible');
+    combinations[6].classList.add('hidden');
+    combinations[7].classList.remove('visible');
+    combinations[7].classList.add('hidden');
+    combinations[8].classList.remove('visible');
+    combinations[8].classList.add('hidden');
+    combinations[9].classList.remove('visible');
+    combinations[9].classList.add('hidden');
+    combinations[10].classList.remove('visible');
+    combinations[10].classList.add('hidden');
+    combinations[11].classList.remove('visible');
+    combinations[11].classList.add('hidden');
   }
   if (scrollTop >= 120 && scrollTop < 1/2 * windowHeight) {
     // show the first combination
     combinations[0].classList.remove('hidden');
     combinations[0].classList.add('visible');
-    combinations[3].classList.remove('hidden');
-    combinations[3].classList.add('visible');
-    combinations[1].classList.remove('visible');
-    combinations[1].classList.add('hidden');
-    combinations[4].classList.remove('visible');
-    combinations[4].classList.add('hidden');
-  } else if (scrollTop >= 1/2 * windowHeight && scrollTop < 7/8*windowHeight) {
-    // show the second combination
     combinations[1].classList.remove('hidden');
     combinations[1].classList.add('visible');
+    combinations[2].classList.remove('hidden');
+    combinations[2].classList.add('visible');
+    combinations[9].classList.remove('hidden');
+    combinations[9].classList.add('visible');
+
+    combinations[3].classList.remove('visible');
+    combinations[3].classList.add('hidden');
+    combinations[4].classList.remove('visible');
+    combinations[4].classList.add('hidden');
+    combinations[5].classList.remove('visible');
+    combinations[5].classList.add('hidden');
+    combinations[10].classList.remove('visible');
+    combinations[10].classList.add('hidden');
+  } else if (scrollTop >= 1/2 * windowHeight && scrollTop < 7/8*windowHeight) {
+    // show the second combination
+    combinations[3].classList.remove('hidden');
+    combinations[3].classList.add('visible');
     combinations[4].classList.remove('hidden');
     combinations[4].classList.add('visible');
+    combinations[5].classList.remove('hidden');
+    combinations[5].classList.add('visible');
+    combinations[10].classList.remove('hidden');
+    combinations[10].classList.add('visible');
 
     // hide the other combinations
     combinations[0].classList.remove('visible');
     combinations[0].classList.add('hidden');
-    combinations[3].classList.remove('visible');
-    combinations[3].classList.add('hidden');
-        combinations[2].classList.remove('visible');
-    combinations[2].classList.add('hidden');
-    combinations[5].classList.remove('visible');
-    combinations[5].classList.add('hidden');
-  } else if (scrollTop >= 7/8*windowHeight && scrollTop <= 5/4*windowHeight) {
-    // show the third combination
-    combinations[2].classList.remove('hidden');
-    combinations[2].classList.add('visible');
-    combinations[5].classList.remove('hidden');
-    combinations[5].classList.add('visible');
-
-    // hide the other combinations
     combinations[1].classList.remove('visible');
     combinations[1].classList.add('hidden');
-    combinations[4].classList.remove('visible');
-    combinations[4].classList.add('hidden');
-  }
-  else if (scrollTop > 5/4*windowHeight) {
     combinations[2].classList.remove('visible');
     combinations[2].classList.add('hidden');
+    combinations[9].classList.remove('visible');
+    combinations[9].classList.add('hidden');
+    
+    combinations[6].classList.remove('visible');
+    combinations[6].classList.add('hidden');
+    combinations[7].classList.remove('visible');
+    combinations[7].classList.add('hidden');
+    combinations[8].classList.remove('visible');
+    combinations[8].classList.add('hidden');
+    combinations[11].classList.remove('visible');
+    combinations[11].classList.add('hidden');
+  } else if (scrollTop >= 7/8*windowHeight && scrollTop <= 5/4*windowHeight) {
+    // show the third combination
+    combinations[6].classList.remove('hidden');
+    combinations[6].classList.add('visible');
+    combinations[7].classList.remove('hidden');
+    combinations[7].classList.add('visible');
+    combinations[8].classList.remove('hidden');
+    combinations[8].classList.add('visible');
+    combinations[11].classList.remove('hidden');
+    combinations[11].classList.add('visible');
+
+    // hide the other combinations
+    combinations[3].classList.remove('visible');
+    combinations[3].classList.add('hidden');
+    combinations[4].classList.remove('visible');
+    combinations[4].classList.add('hidden');
     combinations[5].classList.remove('visible');
     combinations[5].classList.add('hidden');
+    combinations[10].classList.remove('visible');
+    combinations[10].classList.add('hidden');
+  }
+  else if (scrollTop > 5/4*windowHeight) {
+    combinations[6].classList.remove('visible');
+    combinations[6].classList.add('hidden');
+    combinations[7].classList.remove('visible');
+    combinations[7].classList.add('hidden');
+    combinations[8].classList.remove('visible');
+    combinations[8].classList.add('hidden');
+    combinations[11].classList.remove('visible');
+    combinations[11].classList.add('hidden');
   }
     const scrollTop1 = document.documentElement.scrollTop;
   const visibleHeight1 = windowHeight + scrollTop1;

@@ -1132,14 +1132,15 @@ button {
 }
 .title1 {
     position: relative;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    width: 500px
+    width: 1000px
 }
 
 .subtitle {
     margin: 16px 0 0 -4px;
-    font-size: 17px
+    font-size: 17px;
+    color: black;
 }
 
 .subtitle img {
