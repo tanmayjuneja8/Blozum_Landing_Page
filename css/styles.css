@@ -129,7 +129,7 @@ a,
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
-    top: 50%
+    top: 50%;
 }
 
 .center-y {
@@ -137,7 +137,7 @@ a,
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: absolute;
-    top: 50%
+    top: 50%;
 }
 
 .center-x {
@@ -225,7 +225,7 @@ input:-webkit-autofill {
     outline: none;
     border: none;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 *,
@@ -233,7 +233,7 @@ input:-webkit-autofill {
 *:after {
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
@@ -255,7 +255,7 @@ body {
     position: relative;
     margin-top: -2px;
     height: 20px;
-    width: 20px
+    width: 20px;
 }
 
 img {
@@ -698,13 +698,13 @@ h2,
     font-weight: normal;
     font-family: "colfax-light", sans-serif;
     line-height: 1.6;
-    font-size: 40px;
+    font-size: 70px;
     color: #222
 }
 
 h2,
 .h2 {
-    font-size: 36px
+    font-size: 70px
 }
 
 h3,
@@ -819,6 +819,23 @@ button {
     top: 0
 }
 
+.button.list {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
+    box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
+    background: transparent;
+    color: #000;
+}
+
+.button.list:before {
+    background: rgba(255, 255, 255, 0.4)
+}
+
+.button.list:hover {
+    -webkit-box-shadow: 0 30px 40px -10px rgba(34, 34, 34, 0.4);
+    box-shadow: 0 30px 40px -10px rgba(34, 34, 34, 0.4)
+}
+
 .button.white {
     -webkit-box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
     box-shadow: 0 20px 30px -10px rgba(34, 34, 34, 0.2);
@@ -926,7 +943,8 @@ button {
 }
 
 .hero {
-    padding: 30vh 0 200px;
+    padding: 30vh 0;
+    z-index: 999; /* Adjust the value as needed */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -935,21 +953,12 @@ button {
     justify-content: space-between;
     align-items: center; 
     flex-direction: column;
-    width: 100%
-}
-.hero1 {
-    padding: 0px 0 0px;
-    position: fixed;
-    top:0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    height: 100%;
-    display: flex; /* use flexbox to center the text */
-    justify-content: center; /* horizontally center the text */
-    align-items: center; 
-    flex-direction: column;
-    width: 100%
+    width: 100%;
+    /* background-image: url('https://images.ctfassets.net/xny2w179f4ki/6pNHltxbB40NlnO60KEtyA/d0b1c442eef6ec722200ef6aeacca342/hero-gradient-v2.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -999;
 }
 
 
@@ -1023,7 +1032,6 @@ button {
 }
 
 
-
 .hero .button {
     margin-top: 30px
 }
@@ -1077,7 +1085,7 @@ button {
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    width: 1000px
+    width: 100%;
 }
 .rainbow {
     display: inline;
@@ -1112,6 +1120,19 @@ button {
     padding:0.05em;
     font-weight: bold;
     background: -webkit-linear-gradient(left,#FF4D4D, #F9CB28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.rainbow3 {
+    display: inline;
+    animation: rainbow 0.5s ease-in-out infinite;
+    background-clip: text;
+    padding:0.05em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left,#ffff00, #00ff00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -1283,9 +1304,6 @@ button {
 }
 
 @media (max-width: 900px) {
-    .hero {
-        padding: 140px 0 60px
-    }
 
     .screen-wrapper .screen {
         margin: 0 auto -40px;
@@ -2105,13 +2123,13 @@ h2,
     font-weight: normal;
     font-family: "colfax-light", sans-serif;
     line-height: 1.6;
-    font-size: 40px;
+    font-size: 70px;
     color: #222
 }
 
 h2,
 .h2 {
-    font-size: 36px
+    font-size: 70px
 }
 
 h3,
@@ -2141,15 +2159,6 @@ a:hover {
     color: #000000;
 }
 
-@media (max-width: 900px) {
-
-    h1,
-    .h1,
-    h2,
-    .h2 {
-        font-size: 30px
-    }
-}
 
 /*# sourceMappingURL=styles.css.map */
 
