@@ -53,13 +53,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content=".">
     <meta name="keywords" content="GPT-4, Chatbot, Customer Support, AI, Generative AI, Large Language models, LLMs">
     <meta name="author" content="@tanmayjuneja8">
-    <meta name="format-detection" content="telephone=no"/><meta charSet="utf-8"/><title>Blozum AI bot for customer service</title>
+    <meta name="format-detection" content="telephone=no"/><meta charSet="utf-8"/><title>Blozum AI bot for converting visitors</title>
     <meta property="og:type" content="website">
     <meta property="og:description" content="Blozum is a conversational AI based virtual assistant for businesses.">
-    <meta name="title" content="Resolve 50% of customer support questions. Instantly"/>
-    <meta property="og:title" content="Resolve 50% of customer support questions. Instantly."/>
+    <meta name="title" content="Resolve 70% customer support queries, instantly through Blozum."/>
+    <meta property="og:title" content="Resolve 70% customer support queries, instantly through Blozum."/>
     <meta property="twitter:title" content="Blozum">
-    <meta property="twitter:description" content="Blozum is a conversational AI based virtual assistant for businesses.">
+    <meta property="twitter:description" content="Blozum is a conversational AI-based assistant for businesses.">
     <link href="images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css2?family=Gilroy&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -12329,7 +12329,8 @@ font-size: 16px;
             </div>
          </div>
       </div>
-   </div> --> 
+   </div> -->
+
    <div class="jsx-3590430544 fin-section fin-section--features">
       <div class="jsx-311176064 heading-and-cards">
          <div data-testid="grid-container" class="jsx-3758366964 grid-container grid-layout grid-container--3-3 fin-background-color-black">
@@ -12493,12 +12494,20 @@ font-size: 16px;
          </div>
       </div>
    </div>
+      <div class="chatbot">
+</div> 
 
 </div>
   
   <script src="./js/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "a8e2b1b5-aabb-490b-a251-0855bacddbd0",
+        apiHost: "http://localhost:3000",
+    })
+</script>
 <script type="module">
 const arr = [ document.getElementById('rain1'), document.getElementById('rain2'), document.getElementById('rain3'), document.getElementById("button1"), document.getElementById("button2"), document.getElementById("button3")];
 let count = 0;
@@ -12727,6 +12736,7 @@ window.addEventListener('scroll', () => {
     });
 
   });
+  
 </script>
 
 </body>
